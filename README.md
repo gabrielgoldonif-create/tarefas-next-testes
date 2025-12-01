@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lista de Tarefas - Next.js + Testes
 
-## Getting Started
+Projeto simples desenvolvido para prática de componentes Server e Client, hoks personalizados e testes unitários com Jest e Testing Library.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
+- Lista inicial de tarefas simulada a partir de um arquivo local.
+- Adição de novas tarefas através de formulário.
+- Estado global usando Context API.
+- Hook personalizado para contagem de tarefas.
+- Testes para componentes, hook e página principal.
+
+## Tecnologias
+
+- Next.js
+- React
+- TypeScript
+- Jest
+- Testing Library
+
+## Instalação
+
+npm instal
+
+## Executar o projeto
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodar testes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm test
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura básica
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+app/
+components/
+context/
+hooks/
+data/
+tests/
