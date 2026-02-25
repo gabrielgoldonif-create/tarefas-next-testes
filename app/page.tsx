@@ -6,12 +6,14 @@ export default async function HomePage() {
   const tarefas = await buscarTarefas();
 
   return (
-    <main style={{ padding: "20px" }}>
-      <h1>Lista de Tarefas</h1>
+    <main className="page">
+      <div className="main-container">
+        <h1>Lista de Tarefas</h1>
 
-      <TarefasProvider>
-        <ListaDeTarefasClient tarefasIniciais={tarefas} />
-      </TarefasProvider>
+        <TarefasProvider>
+          <ListaDeTarefasClient tarefasIniciais={tarefas} />
+        </TarefasProvider>
+      </div>
     </main>
   );
 }

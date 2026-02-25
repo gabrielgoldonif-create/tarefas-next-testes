@@ -10,7 +10,7 @@ type Props = {
 };
 
 export default function ListaDeTarefasClient({ tarefasIniciais }: Props) {
-  const { tarefas, addTarefa } = useTarefas();
+  const { tarefas, addTarefa, toggleTarefa } = useTarefas();
 
   const tarefasAtuais = tarefas.length > 0 ? tarefas : tarefasIniciais;
 
@@ -21,13 +21,29 @@ export default function ListaDeTarefasClient({ tarefasIniciais }: Props) {
     <section>
       <h2>Suas tarefas</h2>
 
-      <p data-testid="resumo-tarefas">
+      <p>
         Total: {total} | Concluídas: {concluidas} | Pendentes: {pendentes}
       </p>
 
       <ul>
         {tarefasAtuais.map((tarefa) => (
-          <li key={tarefa.id}>{tarefa.titulo}</li>
+          <li key={tarefa.id}>
+            <label style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+              <input
+                type="checkbox"
+                checked={tarefa.concluida}
+                onChange={() => toggleTarefa(tarefa.id)}
+              />
+              <span
+                style={{
+                  textDecoration: tarefa.concluida ? "line-through" : "none",
+                  opacity: tarefa.concluida ? 0.6 : 1,
+                }}
+              >
+                {tarefa.titulo}
+              </span>
+            </label>
+          </li>
         ))}
       </ul>
 
